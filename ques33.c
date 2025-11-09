@@ -3,31 +3,23 @@
  #include <math.h>
 
  int main() {
-int number , originalnumber , remainder , result = 0 , n = 0 ;
- printf("enter a number : ");
- scanf("%d" , &number );
+    int num , on , rem , n = 0 ;
+    float result = 0.0;
 
- originalnumber = number;
+    scanf("%d" , &num);
+    on = num ;
 
- 
- while (originalnumber != 0 ) {
-originalnumber /= 10 ;
-n++;
-
- }
-
-originalnumber = number;
-//calculate the sum of the power of digits 
-while (originalnumber != 0 ){
-remainder = originalnumber % 10 ; 
-result += pow(remainder , n);
-originalnumber /= 10; // remove the last digit 
+    for (on = num ; on != 0; ++n) {
+        on /= 10;
+    }
+on = num;
+while (on!= 0){
+    rem = on % 10;
+    result += (rem , n );
+    on /= 10 ;
 }
-if (result == number ) {
-    printf("%d is an armstrong number . \n" , number);
-}else{
-    printf("%d is not an armstrong number . \n " , number);
-}
- return 0 ; 
-
+if ((int)result == num )
+printf("Armstrong\n");
+else
+printf("not armstrong\n");
  }
